@@ -23,7 +23,7 @@ void draw()
     stroke(255);
     float radius = noise(offsest.x)*64;
     ellipse(location.x,location.y, radius, radius);
-    ellipse(width-location.x, location.y, radius, radius;
+    ellipse(width-location.x, location.y, radius, radius);
   }
   
 }
