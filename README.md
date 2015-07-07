@@ -1,7 +1,5 @@
 # bug-generator
-Small Processing project to create the bug of your dreams
-
-Play with it [here](http://www.openprocessing.org/sketch/204471) (will move this to own website at some point)
+Small Processing project to create the bug of your dreams. Play with it [here](http://www.deadcells.org/bug-generator/).
 
 Press space to start/stop, press R to reset the canvas.
 
