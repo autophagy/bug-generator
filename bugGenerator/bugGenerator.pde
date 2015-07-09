@@ -19,7 +19,7 @@ void draw()
   
     offset.add(velocity);
   
-    fill(200, 200, 200, 30);
+    fill(150, 150, 150, 30);
     stroke(255);
     float radius = noise(offset.x)*64;
     ellipse(location.x,location.y, radius, radius);
