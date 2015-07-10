@@ -5,9 +5,19 @@ boolean running = false;
 
 void setup() {
   size(640, 360);
-  background(0);
+  drawBackground();
   noStroke();
   
+}
+
+void drawBackground() {
+  background(0);
+  stroke(255);
+  noFill();
+  for(int i = 10; i < 700; i += 30)
+  {
+     ellipse(width/2, height/2, i, i);
+  }
 }
 
 void draw()
@@ -36,6 +46,6 @@ void keyPressed() {
   
   if (key == 'r')
   {
-    background(0);
+    drawBackground();
   }
 }
