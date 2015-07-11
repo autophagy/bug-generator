@@ -14,7 +14,7 @@ void drawBackground() {
   background(0);
   stroke(255);
   noFill();
-  for(int i = 10; i < 700; i += 30)
+  for(int i = 10; i < sqrt(pow(width,2) + pow(height,2)); i += 30)
   {
      ellipse(width/2, height/2, i, i);
   }
