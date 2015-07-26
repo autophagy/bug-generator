@@ -12,7 +12,7 @@ void setup() {
 
 void drawBackground() {
   background(0);
-  stroke(255);
+  stroke(100);
   noFill();
   for(int i = 10; i < sqrt(pow(width,2) + pow(height,2)); i += 30)
   {
