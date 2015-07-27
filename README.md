@@ -15,4 +15,4 @@ Produces things like:
 
 Modification of the above project use Minim beat detection to turn bug-generation into a mid-2000s WMP visualiser!
 
-Here is an [example](https://vimeo.com/134554731) of it working.
+Here is an [example](https://vimeo.com/134623868) of it working.
