@@ -8,6 +8,8 @@ PGraphics worm;
 
 boolean circles = true;
 
+int step = 1;
+
 void setup() {
   size(640, 360);
   bg = createGraphics(width, height);
@@ -48,15 +50,18 @@ void draw()
   if(running)
   {
 
-    PVector location = new PVector(noise(offset.x)*(width/1.2), noise(offset.y)*height);
+    for(int i = 1; i <= step; i++)
+    {
+      PVector location = new PVector(noise(offset.x)*(width/1.2), noise(offset.y)*height);
 
-    offset.add(velocity);
+      offset.add(velocity);
 
-    worm.fill(150, 150, 150, 30);
-    worm.stroke(255);
-    float radius = noise(offset.x)*64;
-    worm.ellipse(location.x,location.y, radius, radius);
-    worm.ellipse(width-location.x, location.y, radius, radius);
+      worm.fill(150, 150, 150, 30);
+      worm.stroke(255);
+      float radius = noise(offset.x)*64;
+      worm.ellipse(location.x,location.y, radius, radius);
+      worm.ellipse(width-location.x, location.y, radius, radius);
+    }
 
   }
 
@@ -80,6 +85,16 @@ void keyPressed() {
   if (key == '2')
   {
     circles = false;
+  }
+
+  if (key == '+')
+  {
+    step++;
+  }
+
+  if (key == '-')
+  {
+    step--;
   }
 
   if (key == 'r')
