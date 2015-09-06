@@ -8,7 +8,7 @@ PGraphics worm;
 
 boolean circles = true;
 
-int step = 1;
+int step = 10;
 
 void setup() {
   size(640, 360);
@@ -56,9 +56,10 @@ void draw()
 
       offset.add(velocity);
 
-      worm.fill(150, 150, 150, 30);
+      float tval = map(location.x,0,width/2,15,30);
+      worm.fill(150, 150, 150, tval);
       worm.stroke(255);
-      float radius = noise(offset.x)*64;
+      float radius = map(location.x,0,width/2,0,60);
       worm.ellipse(location.x,location.y, radius, radius);
       worm.ellipse(width-location.x, location.y, radius, radius);
     }
