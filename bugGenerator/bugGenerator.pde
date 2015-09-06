@@ -8,7 +8,7 @@ PGraphics worm;
 
 boolean circles = true;
 
-int step = 10;
+int step = 1;
 
 void setup() {
   size(640, 360);
