@@ -1,5 +1,5 @@
 # bug-generator
-Small Processing project to create the bug of your dreams. Play with it [here](http://www.deadcells.org/bug-generator/).
+Small Processing project to create the bug of your dreams. Play with it [here](https://autophagy.github.io/bug-generator/).
 
 Press space to start/stop, press R to reset the canvas. 1 and 2 toggle the background modes. + and - keys speed up or slow down the generation.
 
