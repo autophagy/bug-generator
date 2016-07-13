@@ -9,6 +9,8 @@ PVector offset = new PVector(0.0, 50.0);
 
 boolean running = false;
 
+boolean circles = false;
+
 Minim minim;
 AudioPlayer player;
 AudioMetaData meta;
@@ -28,7 +30,7 @@ void setup() {
   noStroke();
 
     minim = new Minim(this);
-  player = minim.loadFile("file.mp3");
+  player = minim.loadFile("02. Archangel.mp3");
   beat = new BeatDetect();
 
 }
@@ -41,7 +43,13 @@ void drawBackground(float x) {
 
   for(int i = 10; i < sqrt(pow(width,2) + pow(height,2)); i += x)
   {
-     bg.quad(width/2,height/2+i, width/2+i,height/2, width/2,height/2-i, width/2-i,height/2);
+    if(circles)
+    {
+      bg.ellipse(width/2, height/2, i, i);
+    } else
+    {
+      bg.quad(width/2,height/2+i, width/2+i,height/2, width/2,height/2-i, width/2-i,height/2);
+    }
   }
   
   bg.endDraw();
@@ -53,11 +61,11 @@ void draw()
   if(running)
   {
 
-    if (stepper >= 600)
-    {
-     worm = createGraphics(width, height);
-     stepper = 0;
-    }
+  //  if (stepper >= 600)
+    //{
+     //worm = createGraphics(width, height);
+     //stepper = 0;
+    //}
 
     beat.detect(player.mix);
 
@@ -122,6 +130,16 @@ void keyPressed() {
   if (key == 'r')
   {
     worm = createGraphics(width, height);
+  }
+  
+  if (key == '1')
+  {
+    circles = true;
+  }
+
+  if (key == '2')
+  {
+    circles = false;
   }
 }
 
